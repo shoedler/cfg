@@ -1,0 +1,72 @@
+{
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.fontFamily": "Fira Code",
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.tabSize": 2,
+  "editor.largeFileOptimizations": false,
+  "editor.fontLigatures": true,
+  // "editor.fontFamily": "Iosevka Expanded",
+  "terminal.integrated.fontFamily": "Iosevka Term Expanded",
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+  "git.confirmSync": false,
+  "git.suggestSmartCommit": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.incrementalNaming": "smart",
+  "explorer.sortOrder": "type",
+  "arduino.path": "C:\\Program Files (x86)\\Arduino",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.iconTheme": "file-icons",
+  "todo-tree.tree.showScanModeButton": false,
+  "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^)[\\s\\*]*($TAGS)|^\\s*- \\[ \\])",
+  "emojisense.languages": {
+      "javascript": true,
+      "markdown": true,
+      "plaintext": {
+          "markupCompletionsEnabled": false,
+          "emojiDecoratorsEnabled": false
+      },
+      "scminput": true,
+      "git-commit": true
+  },
+  "emmet.includeLanguages": {
+      "": ""
+  },
+  "atomKeymap.promptV3Features": true,
+  "editor.cursorBlinking": "expand",
+  "editor.cursorWidth": 3,
+  "editor.cursorSmoothCaretAnimation": true,
+  "[vue]": {
+      "editor.defaultFormatter": "octref.vetur"
+  },
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "vetur.format.defaultFormatterOptions": {
+      "prettier": {
+          "printWidth": 150
+      },
+      "js-beautify-html": {
+          "wrap_attributes": "force-expand-multiline"
+      },
+      "prettyhtml": {
+          "printWidth": 100,
+          "singleQuote": false,
+          "wrapAttributes": false,
+          "sortAttributes": false
+      }
+  },
+  "[typescript]": {
+      "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "editor.formatOnSave": true,
+  "editor.lineHeight": 25,
+  "[xml]": {
+      "editor.defaultFormatter": "fabianlauer.vs-code-xml-format"
+  },
+  "workbench.colorTheme": "GitHub Dark",
+  "workbench.editorAssociations": [
+      {
+          "viewType": "jupyter.notebook.ipynb",
+          "filenamePattern": "*.ipynb"
+      }
+  ]
+}
