@@ -6,8 +6,7 @@ My tooling configurations
 
 ### Themes
 
-- August - In Bed by 7pm (Darker)
-
+- `August - In Bed by 7pm (Darker)` - Requires `"editorError.foreground": "#f33a59",` to be set, otherwise error-squiggles are damne-near unreadable
 ## fonts
 
 Sorted by current lovedness.
