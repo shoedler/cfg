@@ -1,4 +1,4 @@
-# cfg
+<marquee><h1>cfg</h1></marquee>
 
 My tooling configurations
 
@@ -6,20 +6,21 @@ My tooling configurations
 
 ### Themes
 
-- `August - In Bed by 7pm (Darker)` - Requires `"editorError.foreground": "#f33a59",` to be set, otherwise error-squiggles are damne-near unreadable
+- `August - In Bed by 7pm (Darker)` - Requires `"editorError.foreground": "#f33a59",` to be set, otherwise error-squiggles are damn-near unreadable$
+
 ## fonts
 
 Sorted by current lovedness.
-
-### Agave NF
-
-- **test drive**: https://www.programmingfonts.org/#agave
-- **download**: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Agave.zip
 
 ### FantasqueSansM NF
 
 - **test drive**: https://www.programmingfonts.org/#fantasque-sans
 - **download**: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FantasqueSansMono.zip
+
+### Agave NF
+
+- **test drive**: https://www.programmingfonts.org/#agave
+- **download**: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Agave.zip
 
 ### CaskaydiaCove NF
 
