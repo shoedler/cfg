@@ -6,7 +6,22 @@ My tooling configurations
 
 ### Themes
 
-- `August - In Bed by 7pm (Darker)` - Requires `"editorError.foreground": "#f33a59",` to be set, otherwise error-squiggles are damn-near unreadable$
+[**August - In Bed by 7pm (Darker)**](https://marketplace.visualstudio.com/items?itemName=inci-august.august-themes) by inci-august. Requires some colors to be adjusted/added in the settings for better readability. The diff editor is pretty much unusable without these changes:
+
+```json
+    "diffEditor.insertedTextBackground": "#53634620", -> "#a0e46167"
+    "diffEditor.removedTextBackground": "#ff9cac20", -> "#ff4c6a93"
+    + "diffEditor.insertedLineBackground": "#a0e46123",
+    + "diffEditor.removedLineBackground": "#ff9cad2f",
+    ...
+    "editorError.foreground": "#f0717870", -> "#f33a59"
+    "editorWarning.foreground": "#ffcb6b70", -> "#ffcb6b",
+    ...
+    + "notificationsWarningIcon.foreground": "#ffcb6b",
+    + "problemsWarningIcon.foreground": "#ffcb6b",
+```
+
+> Check the _vscode_ directory for a modified version of the theme with these changes.
 
 ## fonts
 
