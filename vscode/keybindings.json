@@ -1,5 +1,11 @@
-// Place your key bindings in this file to override the defaultsauto[]
 [
+  /*
+   * Editor Handling
+   *
+   */
+
+  //
+  // Move lines up and down
   {
     "key": "ctrl+up",
     "command": "editor.action.moveLinesUpAction",
@@ -7,7 +13,7 @@
   },
   {
     "key": "alt+up",
-    "command": "-editor.action.moveLinesUpAction",
+    "command": "-editor.action.moveLinesUpAction", // Disables default keybinding
     "when": "editorTextFocus && !editorReadonly"
   },
   {
@@ -17,34 +23,132 @@
   },
   {
     "key": "alt+down",
-    "command": "-editor.action.moveLinesDownAction",
+    "command": "-editor.action.moveLinesDownAction", // Disables default keybinding
     "when": "editorTextFocus && !editorReadonly"
   },
+  //
+  // Search modifier toggles
   {
-    "key": "ctrl+alt+win+n",
-    "command": "-welcome.showNewFileEntries"
+    "key": "alt+c",
+    "command": "toggleSearchEditorCaseSensitive",
+    "when": "inSearchEditor && searchInputBoxFocus"
   },
   {
-    "key": "ctrl+shift+o",
-    "command": "-workbench.action.gotoSymbol"
+    "key": "alt+w",
+    "command": "toggleSearchEditorWholeWord",
+    "when": "inSearchEditor && searchInputBoxFocus"
   },
+
+  /*
+   * Navigation
+   *
+   */
+
+  //
+  // Goto Sym (Editor)
   {
     "key": "ctrl+r",
     "command": "workbench.action.gotoSymbol",
     "when": "editorFocus || editorIsOpen"
   },
   {
-    "key": "ctrl+t",
-    "command": "-workbench.action.showAllSymbols"
+    "key": "ctrl+r",
+    "command": "-workbench.action.openRecent" // Disables default keybinding
   },
   {
     "key": "ctrl+r",
-    "command": "-workbench.action.openRecent"
-  },
-  {
-    "key": "ctrl+r",
-    "command": "-workbench.action.reloadWindow",
+    "command": "-workbench.action.reloadWindow", // Disables default keybinding II
     "when": "isDevelopment"
+  },
+  //
+  // Goto Sym (Workspace)
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.showAllSymbols"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "-workbench.action.quickOpen" // Disables default keybinding
+  },
+  //
+  // Switch between active/prev Editor
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup", // Disables default keybinding
+    "when": "!activeEditorGroupEmpty"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup", // Disables default keybinding
+    "when": "!activeEditorGroupEmpty"
+  },
+  //
+  // Switch to Term (or create) and back to editor
+  {
+    "key": "alt+down",
+    "command": "workbench.action.terminal.focus",
+    "when": "terminalHasBeenCreated"
+  },
+  {
+    "key": "alt+down",
+    "command": "workbench.action.terminal.newWithProfile",
+    "when": "!terminalHasBeenCreated"
+  },
+  {
+    "key": "alt+up",
+    "command": "workbench.action.focusActiveEditorGroup"
+  },
+  //
+  // Toggle Terminal (Panel)
+  {
+    "key": "alt+backspace",
+    "command": "workbench.action.togglePanel"
+  },
+
+  /**
+   * File Explorer
+   *
+   */
+
+  //
+  // New File/Folder
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  //
+  // Delete
+  {
+    "key": "backspace",
+    "command": "moveFileToTrash",
+    "when": "explorerResourceMoveableToTrash && filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus && !treeFindOpen"
+  },
+
+  /*
+   * Disables
+   *
+   */
+  {
+    "key": "ctrl+shift+o",
+    "command": "-workbench.action.gotoSymbol"
+  },
+  {
+    "key": "ctrl+alt+win+n",
+    "command": "-welcome.showNewFileEntries"
   },
   {
     "key": "ctrl+k ctrl+r",
@@ -56,52 +160,11 @@
     "when": "isInDiffEditor"
   },
   {
-    "key": "ctrl+t",
-    "command": "workbench.action.showAllSymbols"
-  },
-  {
-    "key": "ctrl+t",
-    "command": "-workbench.action.quickOpen"
-  },
-  {
-    "key": "ctrl+shift+tab",
-    "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
-    "when": "!activeEditorGroupEmpty"
-  },
-  {
-    "key": "ctrl+tab",
-    "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
-    "when": "!activeEditorGroupEmpty"
-  },
-  {
-    "key": "ctrl+tab",
-    "command": "workbench.action.nextEditor"
-  },
-  {
     "key": "ctrl+pagedown",
     "command": "-workbench.action.nextEditor"
   },
   {
-    "key": "ctrl+shift+tab",
-    "command": "workbench.action.previousEditor"
-  },
-  {
     "key": "ctrl+pageup",
     "command": "-workbench.action.previousEditor"
-  },
-  {
-    "key": "a",
-    "command": "explorer.newFile",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "shift+a",
-    "command": "explorer.newFolder",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "backspace",
-    "command": "moveFileToTrash",
-    "when": "explorerResourceMoveableToTrash && filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus && !treeFindOpen"
   }
 ]
